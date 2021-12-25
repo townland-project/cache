@@ -1,0 +1,34 @@
+{
+  "name": "@townland-project/cache",
+  "version": "0.0.1",
+  "description": "Townland cache package",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "serve": "serve",
+    "build": "tsc --build",
+    "lint": "eslint . --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "townland",
+    "cache"
+  ],
+  "author": {
+    "name": "Townland",
+    "url": "https://townland.xyz",
+    "email": "mail@townland.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/townland-project/cache.git"
+  },
+  "homepage": "https://project.townland.xyz/repo/cache",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "serve": "^13.0.2",
+    "typescript": "^4.5.4"
+  }
+}

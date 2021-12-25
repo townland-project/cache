@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <script type="module">
+        import { Caches } from 'https://cdn.jsdelivr.net/npm/@townland/cache@latest/dist/bundle.js';
+
+        let url = 'https://cdn.townland.ir/assets.json'
+
+        Caches.Character.OnOpen(() => {
+            Caches.Character.GetJson(url).then((res) => res.json()).then(res => {
+                Object.keys(res).forEach((key) => {
+                    let image = res[key]
+                    Caches.Character.GetImage(image).then(async (blob) => {
+                        let url = URL.createObjectURL(blob)
+
+                        let image = document.createElement('img')
+                        image.src = url
+                        document.body.appendChild(image)
+                    })
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
