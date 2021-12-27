@@ -182,6 +182,7 @@ export const Caches = {
     'Character': new CacheStorage('character'),
     'Extera': new CacheStorage('extera'),
     'Room': new CacheStorage('room'),
+    'App': new CacheStorage('room')
 }
 
 interface ICache {
